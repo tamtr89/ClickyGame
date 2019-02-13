@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const Navbar = props => (
-    <nav color="light" light expand="md">
+function Navbar(props) {
+    return(
+    <nav>
         <ul>
             <li className="brand animated">
             <a href="/clickygame">{props.title}</a>
@@ -14,5 +15,5 @@ const Navbar = props => (
         </ul>
     </nav>
 )
-
+}
 export default Navbar;

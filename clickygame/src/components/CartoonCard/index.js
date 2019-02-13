@@ -5,7 +5,7 @@ function CartoonCard(props){
     return (
         <div className="card"
         value={props.id}
-        onLick={() => props.handleClick(props.id)}
+        onClick={() => props.handleClick(props.id)}
         >
 
         <div className="img-container">

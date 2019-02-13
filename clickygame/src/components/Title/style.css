@@ -2,8 +2,9 @@
     width: 100%;
     text-align: center;
     font-size: 3rem;
-    text-decoration: underline;
-    color: #2A77AE;
+    color: rgb(56, 69, 255);
+    font-weight: 600;
+    text-transform: uppercase;
     margin-bottom: 50px;
   }
   
