@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CartoonCard from "./components/CartoonCard";
 import Navbar from "./components/Navbar";
-import Title from "./components/Title";
+import Jumbotron from "./components/Jumbotron";
 import Wrapper from "./components/Wrapper";
 import cartoons from "./cartoons.json";
 import Column from "./Column";
@@ -70,21 +70,20 @@ class App extends Component {
 
   render() {
     return (
+
       <Wrapper>
         <Navbar 
-          title= "Cartoons Clicky Game"
+          title= "Clicky Game"
           score={this.state.currentScore}
           topScore={this.state.topScore}
         />
 
-      <Title>
-        React clicky game
-      </Title>
-
       <Container>
-
+      <Jumbotron
+          mainText= "Sponge Memory Game"
+          lead="Click on an image to earn points, but don't click on any more than once"
+          />
         <Row>
-
           {this.state.cartoons.map(cartoon => (
             <Column size="md-3 sm-6">
               <CartoonCard
@@ -98,10 +97,11 @@ class App extends Component {
               />
             </Column>
           ))}
-
         </Row>
+
       </Container>
       </Wrapper>
+      
     );
   }
 }

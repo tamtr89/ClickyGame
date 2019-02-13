@@ -9,9 +9,9 @@ function Navbar(props) {
             <a href="/clickygame">{props.title}</a>
             </li>
 
-            <li id="current-score">{props.score}</li>
+            <li id="current-score">Current Score: {props.score}</li>
 
-            <li id="top-score">{props.topScore}</li>
+            <li id="top-score">Top Score: {props.topScore}</li>
         </ul>
     </nav>
 )

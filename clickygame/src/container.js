@@ -1,7 +1,15 @@
 import React from "react";
 
+const styles = {
+    container: {
+        paddingLeft: 100,
+        paddingRight: 100,
+        width: 1100
+        
+    }
+}
 const Container = props =>
-<div className="container-fluid">
+<div style={styles.container}>
     {props.children}
 </div>
 

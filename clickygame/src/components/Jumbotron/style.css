@@ -1,0 +1,20 @@
+.jumbotron {
+    margin: 0;
+    padding: 0;
+    color: yellow;
+}
+.display-3 {
+    font-family: 'Bungee Shade', cursive;    
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(6, 139, 117);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lead {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
