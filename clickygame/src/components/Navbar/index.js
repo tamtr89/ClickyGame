@@ -5,9 +5,11 @@ function Navbar(props) {
     return(
     <nav>
         <ul>
-            <li className="brand animated">
+            <li className="brand">
             <a href="/clickygame">{props.title}</a>
             </li>
+
+            <li id="message">{props.message}</li>
 
             <li id="current-score">Current Score: {props.score}</li>
 

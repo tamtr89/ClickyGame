@@ -7,6 +7,7 @@ import cartoons from "./cartoons.json";
 import Column from "./Column";
 import Row from "./Row";
 import Container from "./container";
+import Footer from "./footer.js";
 
 function shuffleCards(arr){
   for (let i = arr.length -1; i > 0; i--){
@@ -19,8 +20,8 @@ function shuffleCards(arr){
 class App extends Component {
   // Set this.state
   state = {
-    message: "Click an image to begin",
     cartoons,
+    message: "",
     currentScore: 0,
     topScore: 0,
     clicked: [],
@@ -30,7 +31,10 @@ class App extends Component {
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1){
       this.handleIncrement();
+
+      // The concat() method is used to join two or more strings.
       this.setState({ clicked: this.state.clicked.concat(id) });
+     
     } else {
       this.handleReset();
     }
@@ -41,16 +45,21 @@ class App extends Component {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
+      message: "Correct!"
     });
+
     if(newScore >= this.state.topScore){
       this.setState({ topScore: newScore});
     }
+
     else if (newScore === 12){
-      this.setState({ message: "You Win!!!"});
+      this.setState({ message: "YOU WIN!!!"});
     }
+    
     this.handleShuffle();
   }
 
+  // Reset Game
   handleReset = () => {
     this.setState({
       message: "Click an image to begin",
@@ -76,6 +85,7 @@ class App extends Component {
           title= "Clicky Game"
           score={this.state.currentScore}
           topScore={this.state.topScore}
+          message={this.state.message}
         />
 
       <Container>
@@ -99,9 +109,13 @@ class App extends Component {
           ))}
         </Row>
 
+      <Footer
+        footer="React App - ClickyGame - Tam."
+      />
+
       </Container>
       </Wrapper>
-      
+     
     );
   }
 }
